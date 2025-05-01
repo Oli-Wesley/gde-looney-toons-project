@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://wruofmrl18cm"]
+
+[ext_resource type="Script" uid="uid://bliffrxopfndx" path="res://Scripts/control.gd" id="1_3kf3n"]
+[ext_resource type="Texture2D" uid="uid://br0ea1xfw47ic" path="res://Resources/Background.png" id="2_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://b0qkbh4gmhhn5" path="res://Resources/Title.png" id="3_3jcrr"]
+[ext_resource type="Texture2D" uid="uid://7i63eol5mc42" path="res://Resources/Play.png" id="4_aobxe"]
+[ext_resource type="Texture2D" uid="uid://wgdyctdyv01b" path="res://Resources/Acheivments.png" id="5_ab40c"]
+[ext_resource type="Texture2D" uid="uid://d2dt5oeuuwjx5" path="res://Resources/Settings.png" id="6_sjh0l"]
+[ext_resource type="Texture2D" uid="uid://d4dwpbdr5cuy3" path="res://Resources/Quit.png" id="7_qki4b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kf3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.768, 0.81)
+texture = ExtResource("2_wfhf6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(559, 127)
+scale = Vector2(6.73422, 7.1025)
+texture = ExtResource("3_3jcrr")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 2
+offset_left = 542.0
+offset_top = 249.0
+offset_right = 630.0
+offset_bottom = 397.0
+icon = ExtResource("4_aobxe")
+flat = true
+
+[node name="Leaderboard" type="Button" parent="."]
+layout_mode = 2
+offset_left = 530.0
+offset_top = 478.0
+offset_right = 622.0
+offset_bottom = 570.0
+icon = ExtResource("5_ab40c")
+flat = true
+expand_icon = true
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 2
+offset_left = 377.0
+offset_top = 510.0
+offset_right = 469.0
+offset_bottom = 600.0
+icon = ExtResource("6_sjh0l")
+flat = true
+expand_icon = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 683.0
+offset_top = 510.0
+offset_right = 774.0
+offset_bottom = 600.0
+icon = ExtResource("7_qki4b")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
