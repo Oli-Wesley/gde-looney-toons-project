@@ -1,87 +1,90 @@
-[gd_scene load_steps=26 format=3 uid="uid://dgp876qvse3vc"]
+[gd_scene load_steps=27 format=3 uid="uid://dkqemhtnashck"]
 
-[ext_resource type="Texture2D" uid="uid://llnq4jn5w5g" path="res://Resources/Placeholder Raodrunner Sprites.png" id="1_dfcav"]
-[ext_resource type="Script" uid="uid://jr5o7mjjauyc" path="res://Scripts/player.gd" id="1_ify7s"]
-[ext_resource type="Texture2D" uid="uid://60b4hy28x0cn" path="res://Resources/Placeholder Raodrunner Sprites flipped.png" id="3_l8qxc"]
+[ext_resource type="Script" uid="uid://jr5o7mjjauyc" path="res://Scripts/player.gd" id="1_x2ivp"]
+[ext_resource type="Texture2D" uid="uid://llnq4jn5w5g" path="res://Resources/Placeholder Raodrunner Sprites.png" id="2_v6vah"]
+[ext_resource type="Script" uid="uid://bq2d6dtr52py4" path="res://Scripts/player_message_player.gd" id="3_4eguo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phdul"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(0, 0, 22, 40)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3mv7"]
+load_path = "res://.godot/imported/Placeholder Raodrunner Sprites flipped.png-6bced12b71cfc15d1398026fe1decf80.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ng366"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(330, 0, 22, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4i5ks"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(44, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ifi5c"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(66, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbu20"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(88, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4866y"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(154, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkjj8"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(176, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s15la"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(198, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vidr"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(287, 0, 22, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wmw2k"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(265, 0, 22, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0vyv"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(243, 0, 22, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umheq"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(180, 0, 20, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jqnu1"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(160, 0, 20, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j65wn"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(136, 0, 20, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5og3h"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(44, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tdclr"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(66, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ty1tk"]
-atlas = ExtResource("1_dfcav")
+atlas = ExtResource("2_v6vah")
 region = Rect2(88, 0, 22, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y0rfj"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(286, 0, 20, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05608"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(266, 0, 20, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2syo8"]
-atlas = ExtResource("3_l8qxc")
+atlas = SubResource("CompressedTexture2D_h3mv7")
 region = Rect2(246, 0, 20, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5bmyy"]
@@ -182,17 +185,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dfcav"]
-radius = 9.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2ivp"]
+height = 34.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_ify7s")
+physics_interpolation_mode = 1
+script = ExtResource("1_x2ivp")
+KYOTE_TIME = 0.2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5bmyy")
-animation = &"new_animation"
+animation = &"WalkRight"
 autoplay = "IdleFaceRight"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
-shape = SubResource("CircleShape2D_dfcav")
+shape = SubResource("CapsuleShape2D_x2ivp")
+
+[node name="PlayerMessagePlayer" type="Node2D" parent="."]
+physics_interpolation_mode = 1
+script = ExtResource("3_4eguo")
