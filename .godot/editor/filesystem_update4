@@ -1,7 +1,7 @@
+res://Scenes/Menu.tscn
 res://Scenes/game.tscn
-res://Scenes/CameraFollow.gd
-res://Prefabs/player.tscn
-res://Resources/player.tscn
-res://Assets/Player.tscn
 res://Assets/player.tscn
 res://Scripts/player.gd
+res://Scripts/CameraFollow.gd
+res://Scripts/control.gd
+res://Scripts/killzone(fall).gd

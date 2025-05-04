@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://ceavtsvv2jh5e"]
 
 [ext_resource type="Texture2D" uid="uid://b2ksb6qasgaab" path="res://Resources/sprite-0003-export.png" id="2_qxrlw"]
-[ext_resource type="Script" uid="uid://ci8adbyyrglbf" path="res://Scenes/CameraFollow.gd" id="3_wowpa"]
+[ext_resource type="Script" uid="uid://ci8adbyyrglbf" path="res://Scripts/CameraFollow.gd" id="3_wowpa"]
 [ext_resource type="PackedScene" uid="uid://6xrl426vuxyv" path="res://Assets/killzone_(fall).tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dkqemhtnashck" path="res://Assets/player.tscn" id="4_3dryh"]
 
@@ -130,6 +130,7 @@ limit_bottom = 120
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("3_wowpa")
-target = NodePath("../Player")
+target = NodePath("")
 
-[node name="Player" parent="." instance=ExtResource("4_3dryh")]
+[node name="Player2" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(22.65, 0)

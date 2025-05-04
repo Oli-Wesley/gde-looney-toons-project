@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		time_since_grounded += delta
-	elif is_on_floor():
+	else:
 		time_since_grounded = 0.0
 	
 	# Handle jump.
@@ -25,7 +25,23 @@ func _process(delta: float) -> void:
 	var direction := Input.get_axis("Move_left", "Move_right")
 	if direction:
 		velocity.x = direction * SPEED * delta * 60
+		if direction > 0:
+			$AnimatedSprite2D.scale.x = -1
+		if direction < 0:
+			$AnimatedSprite2D.scale.x = 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
+	
+	if abs(velocity.x) > 0:
+		if $AnimatedSprite2D.name != "Walk":
+			$AnimatedSprite2D.play("Walk")
+	else:
+		if $AnimatedSprite2D.name != "default":
+			$AnimatedSprite2D.play("default")
+			
 	move_and_slide()
+
+
+
+	
