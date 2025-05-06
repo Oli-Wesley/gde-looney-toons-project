@@ -1,5 +1,6 @@
-res://Assets/Killzone (Hammer).tscn
-res://Scenes/Menu.tscn
 res://Scenes/game.tscn
 res://Assets/player.tscn
-res://Scripts/player.gd
+res://Scenes/Menu.tscn
+res://Assets/killzone.tscn
+res://Scripts/killzone.gd
+res://Scripts/CameraFollow.gd

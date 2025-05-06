@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7yrq8xckljna"]
+
+[ext_resource type="Script" uid="uid://ba3kntm6ckt72" path="res://Scripts/killzone.gd" id="1_rcore"]
+[ext_resource type="AudioStream" uid="uid://cfk6cv84c6s5s" path="res://Resources/Sounds/326133__wagna__falling.wav" id="2_rcore"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjkqu"]
+
+[node name="Killzone" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_rcore")
+audio_stream = ExtResource("2_rcore")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+pitch_scale = 1.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mjkqu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
