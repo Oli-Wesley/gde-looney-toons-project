@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://gio5868vuisb"]
+[gd_scene load_steps=3 format=3 uid="uid://gio5868vuisb"]
 
-[ext_resource type="Script" uid="uid://cmqr7fpondfs7" path="res://Scripts/killzone(Hammer).gd" id="1_a576s"]
+[ext_resource type="Script" uid="uid://cmqr7fpondfs7" path="res://Scripts/killzone(Hammer).gd" id="1_4rab1"]
 
-[node name="Killzone (Hammer)" type="Area2D"]
-script = ExtResource("1_a576s")
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxyl4"]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.4
+[node name="Hammer Zone" type="Area2D"]
+script = ExtResource("1_4rab1")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hxyl4")
+debug_color = Color(0.988235, 0.0588235, 0.239216, 0.419608)

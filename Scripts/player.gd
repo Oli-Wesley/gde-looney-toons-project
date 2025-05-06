@@ -6,10 +6,12 @@ extends CharacterBody2D
 @export var KYOTE_TIME: float = 0.1
 @export var time_since_grounded: float = 0.0
 
+func is_grounded() -> bool:
+	return $RayCastLeft.is_colliding() or $RayCastCenter.is_colliding() or $RayCastRight.is_colliding()
 
 func _process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_grounded():
 		velocity += get_gravity() * delta
 		time_since_grounded += delta
 	else:
@@ -41,7 +43,3 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("default")
 			
 	move_and_slide()
-
-
-
-	
