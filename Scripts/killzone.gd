@@ -18,6 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 	add_child(timer)
 	timer.connect("timeout", _on_timer_timeout)
 	timer.start()
+	body.set_process(false)
 
 func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
