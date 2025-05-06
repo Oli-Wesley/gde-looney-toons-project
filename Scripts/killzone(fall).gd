@@ -3,9 +3,8 @@ extends Area2D
 @onready var timer = $Timer
 
 func _on_body_entered(body): 
-	print ("*Cartoon falling sound*")
-	timer.start()
+	$AudioStreamPlayer.play()
+	$Timer.start()
 
-
-func _on_timer_timeout():
+func _on_timer_timeout(timer):
 	get_tree().reload_current_scene()

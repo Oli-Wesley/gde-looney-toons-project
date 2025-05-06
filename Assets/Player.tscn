@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dkqemhtnashck"]
 
 [ext_resource type="Script" uid="uid://jr5o7mjjauyc" path="res://Scripts/player.gd" id="1_x2ivp"]
-[ext_resource type="Script" uid="uid://bq2d6dtr52py4" path="res://Scripts/player_message_player.gd" id="3_4eguo"]
+[ext_resource type="Script" path="res://Scripts/player_message_player.gd" id="3_4eguo"]
 [ext_resource type="Texture2D" uid="uid://llnq4jn5w5g" path="res://Resources/Placeholder Raodrunner Sprites.png" id="3_x2ivp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2ivp"]
