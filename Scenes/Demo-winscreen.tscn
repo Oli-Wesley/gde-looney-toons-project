@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnfefnj0dsqe2"]
+[gd_scene load_steps=3 format=3 uid="uid://3f8ynvws8vvh"]
 
 [ext_resource type="Texture2D" uid="uid://c7gfglv1jqqaf" path="res://Resources/Win-screen.png" id="1_mlmm2"]
-[ext_resource type="Script" uid="uid://crfwlum1qb6s6" path="res://demo_winscreen.gd" id="1_ppk0t"]
+[ext_resource type="Script" path="res://demo_winscreen.gd" id="1_ppk0t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,8 +15,8 @@ grow_vertical = 2
 script = ExtResource("1_ppk0t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(640.375, 324.961)
-scale = Vector2(0.257913, 0.183603)
+position = Vector2(575.875, 327.461)
+scale = Vector2(0.231905, 0.185028)
 texture = ExtResource("1_mlmm2")
 
 [node name="Timer" type="Timer" parent="."]

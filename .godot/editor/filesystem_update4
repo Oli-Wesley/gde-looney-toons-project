@@ -1,6 +1,6 @@
 res://Scenes/game.tscn
-res://Assets/player.tscn
 res://Scenes/Menu.tscn
+res://Assets/player.tscn
 res://Assets/killzone.tscn
-res://Scripts/killzone.gd
-res://Scripts/CameraFollow.gd
+res://Scenes/Demo-winscreen.tscn
+res://Scenes/game.gd
