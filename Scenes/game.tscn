@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://ceavtsvv2jh5e"]
+[gd_scene load_steps=10 format=4 uid="uid://ceavtsvv2jh5e"]
 
 [ext_resource type="Texture2D" uid="uid://b2ksb6qasgaab" path="res://Resources/sprite-0003-export.png" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://b63btwqp3y5y2" path="res://Resources/Blue.png" id="2_wowpa"]
 [ext_resource type="Script" uid="uid://ci8adbyyrglbf" path="res://Scripts/CameraFollow.gd" id="3_wowpa"]
-[ext_resource type="PackedScene" uid="uid://dkqemhtnashck" path="res://Assets/player.tscn" id="4_3dryh"]
-[ext_resource type="PackedScene" uid="uid://7yrq8xckljna" path="res://Assets/killzone.tscn" id="4_wowpa"]
+[ext_resource type="PackedScene" uid="uid://dkqemhtnashck" path="res://Assets/Player.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" path="res://Assets/killzone.tscn" id="4_wowpa"]
+[ext_resource type="Script" uid="uid://cra2dcjtkrlrk" path="res://Scripts/victory.gd" id="5_i6g32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("2_qxrlw")
@@ -70,6 +71,9 @@ texture = ExtResource("2_qxrlw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l0tm"]
+size = Vector2(40.25, 19)
+
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
@@ -94,10 +98,20 @@ tile_set = SubResource("TileSet_3dryh")
 [node name="Killzone" parent="Level" instance=ExtResource("4_wowpa")]
 position = Vector2(423, 126)
 scale = Vector2(40, 1)
-metadata/_edit_group_ = true
+
+[node name="Victory" type="Area2D" parent="Level"]
+position = Vector2(1000, -371)
+collision_mask = 3
+script = ExtResource("5_i6g32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Victory"]
+position = Vector2(-1, -5)
+shape = SubResource("RectangleShape2D_1l0tm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(470, -251)
 scale = Vector2(6.25, 6.81481)
 texture = ExtResource("2_wowpa")
+
+[connection signal="body_entered" from="Level/Victory" to="Level/Victory" method="_on_body_entered"]

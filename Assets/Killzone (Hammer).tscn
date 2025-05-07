@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://gio5868vuisb"]
+
+[ext_resource type="Script" uid="uid://cmqr7fpondfs7" path="res://Scripts/killzone(Hammer).gd" id="1_a576s"]
+
+[node name="Killzone (Hammer)" type="Area2D"]
+script = ExtResource("1_a576s")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -19,3 +19,7 @@ func _process(delta: float) -> void:
 	# like aim at some position infront of the player so they can see more.
 	# see: https://youtu.be/2VJfPOGTStU?t=417
 	
+
+
+func _on_victory_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/Demo-winscreen.tscn")
